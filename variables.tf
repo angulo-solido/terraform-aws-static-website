@@ -33,3 +33,16 @@ variable "cors_allowed_origins" {
   type        = list(string)
   default     = []
 }
+
+# Manage redirections
+variable "redirect" {
+  type        = bool
+  default     = false
+  description = "Redirect requests for an object/URL?"
+}
+
+variable "redirect_destination" {
+  type        = string
+  default     = ""
+  description = "Target bucket website address or personal domain"
+}
